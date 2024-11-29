@@ -4,10 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animal Tables</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./index.css" />
   </head>
-  <body class="root">
-    Hello World !!
-    <script type="module" src="./index.js"></script>
+  <body>
+    <!-- Big Cats Table -->
+    <div id="big-cats-table-container" class="table-container"></div>
+
+    <!-- Dogs Table -->
+    <div id="dogs-table-container" class="table-container"></div>
+
+    <!-- Big Fishes Table -->
+    <div id="big-fishes-table-container" class="table-container"></div>
+
+    <!-- Modal for adding new entry -->
+    <div
+      class="modal fade"
+      id="addEntryModal"
+      tabindex="-1"
+      aria-labelledby="addEntryModalLabel"
+    >
+      aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addEntryModalLabel">Add New Entry</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="addEntryForm">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameInput"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sizeInput"
+                  placeholder="Size"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="locationInput"
+                  placeholder="Location"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Add Entry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
